@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Binary Converter</title>
+  <link rel="stylesheet" href="st.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">← Back</a>
+  </nav>
+
+  <h1>Binary Converter</h1>
+  <input type="text" id="textInput" placeholder="Enter text">
+  <button onclick="convertToBinary()">Convert</button>
+  <p id="binaryOutput"></p>
+
+  <script>
+    function convertToBinary() {
+      const text = document.getElementById("textInput").value;
+      let binary = "";
+      for (let i = 0; i < text.length; i++) {
+        binary += text.charCodeAt(i).toString(2).padStart(8, "0") + " ";
+      }
+      document.getElementById("binaryOutput").textContent = binary.trim();
+    }
+  </script>
+</body>
+</html>

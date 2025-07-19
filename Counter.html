@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Word Counter</title>
+  <link rel="stylesheet" href="st.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">← Back</a>
+  </nav>
+
+  <h1>Word Counter</h1>
+  <textarea id="textInput" placeholder="Type something..."></textarea>
+  <br>
+  <button onclick="countWords()">Count</button>
+  <p id="countResult"></p>
+
+  <script>
+    function countWords() {
+      const text = document.getElementById("textInput").value.trim();
+      const wordCount = text === "" ? 0 : text.split(/\s+/).length;
+      document.getElementById("countResult").textContent = "Word count: " + wordCount;
+    }
+  </script>
+</body>
+</html>

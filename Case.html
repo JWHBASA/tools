@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Text Case Converter</title>
+  <link rel="stylesheet" href="st.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">← Back</a>
+  </nav>
+
+  <h1>Text Case Converter</h1>
+  <textarea id="textInput" placeholder="Enter text here..."></textarea>
+  <br>
+  <button onclick="toUpper()">UPPERCASE</button>
+  <button onclick="toLower()">lowercase</button>
+  <p id="result"></p>
+
+  <script>
+    function toUpper() {
+      const text = document.getElementById("textInput").value;
+      document.getElementById("result").textContent = text.toUpperCase();
+    }
+
+    function toLower() {
+      const text = document.getElementById("textInput").value;
+      document.getElementById("result").textContent = text.toLowerCase();
+    }
+  </script>
+</body>
+</html>
